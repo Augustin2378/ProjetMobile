@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ProjetPays</string>
+    <string name="search_text_entry">Entrer un pays ou une capitale</string>
+    <string name="image_button_content">search_icon</string>
+    <string name="title_activity_home">Activité Home</string>
+    <string name="img_content">Drapeau du pays séléctionné</string>
+    <string name="capital_text">Capitale :</string>
+    <string name="population_text">Population :</string>
+    <string name="superficie_text">Superficie (m²) :</string>
+    <string name="langues_text">Langues :</string>
+    <string name="add_to_favorites">Add favorite\n</string>
+    <string name="image_button_favorites">Favorites</string>
+    <string name="view_favorites">View Favorites</string>
+</resources>
