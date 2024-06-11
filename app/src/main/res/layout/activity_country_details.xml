@@ -37,146 +37,97 @@
 
             <ImageButton
                 android:id="@+id/favoriteButton"
+                android:src="@drawable/ic_heart"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/add_to_favorites"
                 android:padding="8dp"
-                android:src="@android:drawable/btn_star_big_off" />
+                 />
+
+            <ImageView
+                android:id="@+id/country_flag"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:layout_toEndOf="@id/country_name"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic" />
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/country_flag"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            tools:src="@tools:sample/backgrounds/scenic" />
-
-        <!-- Card for Capital -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/country_capital_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:text="@string/capital_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <TextView
+            android:id="@+id/country_capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            tools:text="Capital" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/capital_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-                <TextView
-                    android:id="@+id/country_capital"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    tools:text="Capital" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card for Population -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/country_population_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:text="@string/population_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <TextView
+            android:id="@+id/country_population"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            tools:text="Population" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/population_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-                <TextView
-                    android:id="@+id/country_population"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    tools:text="Population" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card for Area -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/country_area_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:text="@string/superficie_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <TextView
+            android:id="@+id/country_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            tools:text="Superficie" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/superficie_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-                <TextView
-                    android:id="@+id/country_area"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    tools:text="Superficie" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Card for Languages -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/country_languages_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:text="@string/langues_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/langues_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-                <TextView
-                    android:id="@+id/country_languages"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    tools:text="Langues" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/country_languages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            tools:text="Langues" />
 
     </LinearLayout>
 </ScrollView>

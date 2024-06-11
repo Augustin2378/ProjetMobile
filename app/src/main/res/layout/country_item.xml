@@ -4,43 +4,37 @@
     android:id="@+id/countryItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="8dp"
-    android:gravity="center"
+    android:gravity="center_vertical"
     tools:ignore="MissingConstraints">
 
     <ImageView
         android:id="@+id/countryFlag"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
         android:contentDescription="@string/img_content"
         tools:ignore="ContentDescription" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        tools:text="Country Name" />
 
-        <TextView
-            android:id="@+id/countryName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            tools:text="Country Name" />
-
-        <ImageButton
-            android:id="@+id/favoriteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/btn_star_big_off"
-            android:contentDescription="@string/add_to_favorites"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
-            android:layout_marginStart="8dp" />
-
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_heart"
+        android:contentDescription="@string/add_to_favorites"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
 </LinearLayout>
